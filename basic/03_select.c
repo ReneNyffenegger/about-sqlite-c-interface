@@ -41,7 +41,7 @@ int main() {
     }
 
     sqlite3_stmt *stmt;
-    if (sqlite3_prepare(db, "select * from tab where foo >= ? order by foo", -1, &stmt, NULL)) {
+    if (sqlite3_prepare_v2(db, "select * from tab where foo >= ? order by foo", -1, &stmt, NULL)) {
        printf("Error executing sql statement\n");
        sqlite3_close(db);
        exit(-1);

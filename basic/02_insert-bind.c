@@ -15,7 +15,7 @@ int main() {
  // Prepare a statement for multiple use:
  //
     sqlite3_stmt *stmt;
-    if (sqlite3_prepare(db, "insert into tab values(?, ?, ?)", -1, &stmt, NULL)) {
+    if (sqlite3_prepare_v2(db, "insert into tab values(?, ?, ?)", -1, &stmt, NULL)) {
        printf("Error executing sql statement\n");
        sqlite3_close(db);
        exit(-1);
