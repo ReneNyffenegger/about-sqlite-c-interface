@@ -1,5 +1,5 @@
 00_create-table
 01_insert
-02-insert-bind
-03-select
+02_insert-bind
+03_select
 the.db
